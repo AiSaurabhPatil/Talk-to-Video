@@ -31,6 +31,7 @@ audio_files = [ '../video_to_mp3/audio_1.mp3',
 # Initialize tqdm to display the progress bar for transcribing audio files
 progress_bar_audio = tqdm(total=len(audio_files), desc="Transcribing Audio")
 
+all_transcriptions = []
 # Loop through each audio file and transcribe
 for index, audio_file in enumerate(audio_files, start=1):
     try:
@@ -45,6 +46,9 @@ for index, audio_file in enumerate(audio_files, start=1):
 
         with open(transcription_file, "w", encoding="utf-8") as text_file:
             text_file.write(transcription_text)
+
+        # Append the transcription text to the list
+        all_transcriptions.append(transcription_text) 
 
         # Update the progress bar for audio file processing
         progress_bar_audio.update(1)
@@ -66,3 +70,11 @@ for _ in audio_files:
 
 # Close the progress bar for the overall transcription process
 progress_bar_transcription.close()
+
+# Concatenate all transcriptions into a single text file
+concatenated_transcription_file = os.path.join(output_directory, "../all_transcriptions.txt")
+
+with open(concatenated_transcription_file, "w", encoding="utf-8") as text_file:
+    text_file.write("\n".join(all_transcriptions))
+
+print(f"All transcriptions have been concatenated to {concatenated_transcription_file}")
