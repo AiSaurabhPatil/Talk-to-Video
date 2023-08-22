@@ -14,18 +14,18 @@ output_directory = "../transcriptions"
 os.makedirs(output_directory, exist_ok=True)
 
 # List audio files in the input directory
-audio_files = [ '../video_to_mp3\\audio_1.mp3', 
-                '../video_to_mp3\\audio_2.mp3', 
-                '../video_to_mp3\\audio_3.mp3',
-                '../video_to_mp3\\audio_4.mp3', 
-                '../video_to_mp3\\audio_5.mp3', 
-                '../video_to_mp3\\audio_6.mp3', 
-                '../video_to_mp3\\audio_7.mp3', 
-                '../video_to_mp3\\audio_8.mp3', 
-                '../video_to_mp3\\audio_9.mp3',
-                '../video_to_mp3\\audio_10.mp3',
-                '../video_to_mp3\\audio_11.mp3', 
-                '../video_to_mp3\\audio_12.mp3',
+audio_files = [ '../video_to_mp3/audio_1.mp3', 
+                '../video_to_mp3/audio_2.mp3', 
+                '../video_to_mp3/audio_3.mp3',
+                '../video_to_mp3/audio_4.mp3', 
+                '../video_to_mp3/audio_5.mp3', 
+                '../video_to_mp3/audio_6.mp3', 
+                '../video_to_mp3/audio_7.mp3', 
+                '../video_to_mp3/audio_8.mp3', 
+                '../video_to_mp3/audio_9.mp3',
+                '../video_to_mp3/audio_10.mp3',
+                '../video_to_mp3/audio_11.mp3', 
+                '../video_to_mp3/audio_12.mp3',
             ]
 
 # Initialize tqdm to display the progress bar for transcribing audio files
